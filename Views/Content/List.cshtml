@@ -1,0 +1,21 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <h2>My Content</h2>
+    @{ 
+        foreach(var i in Model.allContent)
+            {
+                <div>
+                    <h2>@i.Name</h2>
+                    <p>@i.Category.Name</p>
+                </div>
+            }
+    }
+</body>
+</html>
