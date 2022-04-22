@@ -13,7 +13,6 @@ namespace HikikomoriWEB.MVC.Models
         public string Genre { get; set; }
         public string Autor { get; set; }
         public int CreationYear { get; set; }
-        public string Img { get; set; }
         public int Rating { get; set; } //оценка
         public bool Replay { get; set; } //пересмотрел бы контент?
     }

@@ -1,15 +1,29 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    <link href ="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    @await Html.PartialAsync("CssPartial")
+    @await Html.PartialAsync("MetatagsPartial")
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div id="page-wrapper">
+
+       @await Html.PartialAsync("HeaderPartial")
+
+        <!-- Main -->
+        <div id="main">
+            <div class="container">
+                <div class="row main-row">
+                    <div class="col-8 col-12-medium imp-medium">
+                        @RenderBody()
+                    </div>
+                </div>
+                @await Html.PartialAsync("SidebarPartial")
+            </div>
+        </div>
+        <!-- Footer -->
+       @await Html.PartialAsync("FooterPartial")
     </div>
-    <script src ="~/js/bootstrap.min.js"></script>
+    @await Html.PartialAsync("ScriptsPartial")
 </body>
 </html>

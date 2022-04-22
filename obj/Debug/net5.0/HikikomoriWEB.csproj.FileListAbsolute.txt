@@ -118,3 +118,13 @@ C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\Hikikomori
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Shared\CssPartial.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Shared\FooterPartial.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Shared\HeaderPartial.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Shared\MetatagsPartial.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Shared\ScriptsPartial.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Shared\SidebarPartial.cshtml.g.cs

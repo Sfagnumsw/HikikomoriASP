@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HikikomoriWEB.ViewModelsBag
 {
-    public class ContentViewModel
+    public class ContentViewModel //нужно для того чтобы было удобнее дергать модели (единый мешок для моделей)
     {
         public IEnumerable<Content> allContent { get; set; }
     }

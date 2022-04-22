@@ -20,7 +20,7 @@ using HikikomoriWEB.ViewModelsBag;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"14c55f2ddf2ccb3018c0243eb471494b287a47bc", @"/Views/Content/List.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5acb3091ee3b91a1666d595d38f7a5d9ed420328", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b658783994c8f5b530f0c94b16c50764970abbf5", @"/Views/_ViewImports.cshtml")]
     public class Views_Content_List : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden

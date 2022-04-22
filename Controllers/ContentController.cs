@@ -21,7 +21,6 @@ namespace HikikomoriWEB.Controllers
 
         public ViewResult List()
         {
-            ViewBag.Title = "Remember Content";
             ContentViewModel bag = new ContentViewModel();
             bag.allContent = _content.AllContent;
             return View(bag);
