@@ -1,3 +1,4 @@
+using HikikomoriWEB.MVC.HelperClass;
 using HikikomoriWEB.MVC.HelperInterfaces;
 using HikikomoriWEB.MVC.MockClass;
 using Microsoft.AspNetCore.Builder;
@@ -16,8 +17,11 @@ namespace HikikomoriWEB
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+        public Startup(IConfiguration configuration) => Configuration = configuration;
         public void ConfigureServices(IServiceCollection services) //функционал подключается с помощью сервисов в MVC
         {
+            Configuration.Bind("Project", new Config()); //подключение конфигурации из appsettings.json и связывание с соответсвующим классом
             services.AddControllersWithViews().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider(); //подключение поддержки MVC и совместимость версий asp.net core 3
             //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации
             services.AddTransient<IContent, MockContent>();
