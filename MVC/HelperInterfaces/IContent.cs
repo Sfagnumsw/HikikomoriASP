@@ -8,7 +8,9 @@ namespace HikikomoriWEB.MVC.HelperInterfaces
 {
     public interface IContent
     {
-        IEnumerable<Content> AllContent { get;} //получить или записать контент
+        IEnumerable<Content> AllContent { get; } //получить или записать контент
         Content GetOnId(int ContentId); //контент по ID
+        void SaveContent(Content obj); //сохранить
+        void DeliteContent(int id); //удалить
     }
 }

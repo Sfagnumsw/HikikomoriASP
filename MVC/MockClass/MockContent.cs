@@ -10,7 +10,7 @@ namespace HikikomoriWEB.MVC.MockClass
     public class MockContent : IContent
     {
         private readonly ICategory _category = new MockCategory();
-        public IEnumerable<Content> AllContent // сделать заполнение от пользователя set
+        public IEnumerable<Content> AllContent
         {
             get
             {
@@ -22,7 +22,17 @@ namespace HikikomoriWEB.MVC.MockClass
             }
         }
 
+        public void DeliteContent(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Content GetOnId(int ContentId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveContent(Content obj)
         {
             throw new NotImplementedException();
         }

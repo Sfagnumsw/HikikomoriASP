@@ -12,15 +12,8 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#nullable restore
-#line 1 "C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\Views\_ViewImports.cshtml"
-using HikikomoriWEB.ViewModelsBag;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"45b5ac5c25a3ce2fc777914c7f710864794d5bf6", @"/Views/Shared/FooterPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b658783994c8f5b530f0c94b16c50764970abbf5", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a9af4978b9c2bfca24ef48e96efe5f8573634464", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_FooterPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

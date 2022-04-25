@@ -1,6 +1,5 @@
 using HikikomoriWEB.MVC.HelperClass;
 using HikikomoriWEB.MVC.HelperInterfaces;
-using HikikomoriWEB.MVC.MockClass;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -8,10 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using HikikomoriWEB.Domain.Repository;
+using HikikomoriWEB.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace HikikomoriWEB
 {
@@ -22,11 +20,16 @@ namespace HikikomoriWEB
         public void ConfigureServices(IServiceCollection services) //функционал подключается с помощью сервисов в MVC
         {
             Configuration.Bind("Project", new Config()); //подключение конфигурации из appsettings.json и связывание с соответсвующим классом
+      
+            //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации через configure
+
+            services.AddTransient<IContent, ContentRepositoryEntity>(); //подключение функционала
+            services.AddTransient<ICategory, CategoryRepositoryEntity>();
+            services.AddTransient<DataManager>();
+
+            services.AddDbContext<AppDbContext>(i => i.UseSqlServer(Config.ConnectionString)); //подключение контекста БД
+
             services.AddControllersWithViews().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider(); //подключение поддержки MVC и совместимость версий asp.net core 3
-            //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации
-            services.AddTransient<IContent, MockContent>();
-            services.AddTransient<ICategory, MockCategory>();
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,12 +39,11 @@ namespace HikikomoriWEB
             {
                 app.UseDeveloperExceptionPage(); //если в окружении разработки то выводит подробную инфу об ошибках
             }
-            app.UseRouting(); //система маршрутизации (если используем AddMvc, то устанавливаем дефолРоут и отключаем эндпоинтРоут в сервисе)
             app.UseStaticFiles(); //поддержка статичных файлов (css,js...)
+            app.UseRouting(); //система маршрутизации (если используем AddMvc, то устанавливаем дефолРоут и отключаем эндпоинтРоут в сервисе)
             app.UseStatusCodePages(); //обработка ошибок http (404)
             app.UseEndpoints(endpoints => { endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}"); }); //маршрутизация под useRouting(если в адресе не прописан контроллер, то используем по умолчанию контроллер для главной страницы и меотод)
             //app.UseMvcWithDefaultRoute(); //другой способ маршрутизации
-            
         }
     }
 }
