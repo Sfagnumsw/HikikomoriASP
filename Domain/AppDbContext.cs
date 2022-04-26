@@ -9,7 +9,7 @@ namespace HikikomoriWEB.Domain
 {
     public class AppDbContext : DbContext
     {
-        AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<Content> Content { get; set; } // таблица
         public DbSet<Category> Category { get; set; } // таблица

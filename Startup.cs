@@ -21,7 +21,7 @@ namespace HikikomoriWEB
         {
             Configuration.Bind("Project", new Config()); //подключение конфигурации из appsettings.json и связывание с соответсвующим классом
       
-            //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации через configure
+            //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации через configure(отключаем эндпоинт)
 
             services.AddTransient<IContent, ContentRepositoryEntity>(); //подключение функционала
             services.AddTransient<ICategory, CategoryRepositoryEntity>();

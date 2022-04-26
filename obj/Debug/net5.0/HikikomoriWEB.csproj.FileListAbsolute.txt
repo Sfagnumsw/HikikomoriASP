@@ -89,7 +89,6 @@ C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\Hikikomori
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.csproj.AssemblyReference.cache
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.AssemblyInfoInputs.cache
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.AssemblyInfo.cs
@@ -167,3 +166,4 @@ C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\Hikikomori
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\appsettings.production.json
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\appsettings.staging.json
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.csproj.AssemblyReference.cache
