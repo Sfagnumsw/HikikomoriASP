@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace HikikomoriWEB.MVC.HelperInterfaces
 {
-    public interface IContent
+    public interface IContent // контент который уже посмотрел
     {
-        IEnumerable<Content> AllContent { get; } //получить или записать контент
+        IEnumerable<Content> AllContent { get;} //получить контент
         Content GetOnId(int ContentId); //контент по ID
         void SaveContent(Content obj); //сохранить
-        void DeliteContent(int id); //удалить
+        void DeliteContent(int ContentId); //удалить
+        IEnumerable<Content> GetOnCategoryId(int CategoryId); // получить весь контент из определенной категории
     }
 }

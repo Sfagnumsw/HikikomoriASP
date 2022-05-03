@@ -7,11 +7,13 @@ namespace HikikomoriWEB.Domain
     {
         public IContent Content { get; set; }
         public ICategory Category { get; set; }
+        public IRemember Remember { get; set; }
 
-        public DataManager(IContent content, ICategory category)
+        public DataManager(IContent content, ICategory category, IRemember remember)
         {
             Category = category;
             Content = content;
+            Remember = remember;
         }
     }
 }

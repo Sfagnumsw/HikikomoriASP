@@ -25,11 +25,12 @@ namespace HikikomoriWEB
 
             services.AddTransient<IContent, ContentRepositoryEntity>(); //подключение функционала
             services.AddTransient<ICategory, CategoryRepositoryEntity>();
+            services.AddTransient<IRemember, RememberRepositoryEntity>();
             services.AddTransient<DataManager>();
 
             services.AddDbContext<AppDbContext>(i => i.UseSqlServer(Config.ConnectionString)); //подключение контекста БД
 
-            services.AddControllersWithViews().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider(); //подключение поддержки MVC и совместимость версий asp.net core 3
+            services.AddControllersWithViews().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider(); //подключение поддержки MVC и совместимость версий asp.net core 3 , а так же сервисы для контроллеров и предствалений
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

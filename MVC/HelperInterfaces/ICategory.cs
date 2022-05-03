@@ -9,5 +9,6 @@ namespace HikikomoriWEB.MVC.HelperInterfaces
     public interface ICategory //интерфейс связан с реализующим его классом (такая логика), чтобы передавать данные через model и view
     {
         IEnumerable<Category> GetCategories { get; } //показать все категории
+        Category GetOnId(int CategoryId); // категория по id
     }
 }

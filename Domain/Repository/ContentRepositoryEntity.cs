@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace HikikomoriWEB.Domain.Repository
 {
-    public class ContentRepositoryEntity : IContent
+    public class ContentRepositoryEntity : IContent // функционал модели
     {
         private readonly AppDbContext context;
         public ContentRepositoryEntity(AppDbContext context)
@@ -16,16 +16,20 @@ namespace HikikomoriWEB.Domain.Repository
 
         public IEnumerable<Content> AllContent => context.Content;
 
- 
-        public void DeliteContent(int id)
+        public void DeliteContent(int Contentid)
         {
-            context.Content.Remove(new Content() { Id = id });
+            context.Content.Remove(new Content() { Id = Contentid });
             context.SaveChanges();
         }
 
         public Content GetOnId(int ContentId)
         {
             return context.Content.FirstOrDefault(i => i.Id == ContentId);
+        }
+
+        public IEnumerable<Content> GetOnCategoryId(int CategoryId)
+        {
+            return context.Content.Where(i => i.Category.Id == CategoryId);
         }
 
         public void SaveContent(Content obj)

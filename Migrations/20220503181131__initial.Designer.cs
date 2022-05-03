@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HikikomoriWEB.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220426161803__initial")]
+    [Migration("20220503181131__initial")]
     partial class _initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,9 +27,6 @@ namespace HikikomoriWEB.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("MetaTitle")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -63,11 +60,6 @@ namespace HikikomoriWEB.Migrations
                         new
                         {
                             Id = 10004,
-                            Name = "Аниме"
-                        },
-                        new
-                        {
-                            Id = 10005,
                             Name = "Мультфильмы"
                         });
                 });
@@ -91,9 +83,6 @@ namespace HikikomoriWEB.Migrations
                     b.Property<string>("Genre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MetaTitle")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -111,7 +100,46 @@ namespace HikikomoriWEB.Migrations
                     b.ToTable("Content");
                 });
 
+            modelBuilder.Entity("HikikomoriWEB.MVC.Models.Remember", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Autor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CreationYear")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Genre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Remember");
+                });
+
             modelBuilder.Entity("HikikomoriWEB.MVC.Models.Content", b =>
+                {
+                    b.HasOne("HikikomoriWEB.MVC.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId");
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("HikikomoriWEB.MVC.Models.Remember", b =>
                 {
                     b.HasOne("HikikomoriWEB.MVC.Models.Category", "Category")
                         .WithMany()

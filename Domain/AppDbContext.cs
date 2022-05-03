@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace HikikomoriWEB.Domain
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : DbContext // контекст базы данных , нужен чтобы связать БД через миграции (еще есть IdentityDbContext для установления границ пользователей и индентификации)
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<Content> Content { get; set; } // таблица
         public DbSet<Category> Category { get; set; } // таблица
-
+        public DbSet<Remember> Remember { get; set; } // таблица
         protected override void OnModelCreating(ModelBuilder modelBuilder) // заполнение таблицы при создании
         {
             modelBuilder.Entity<Category>().HasData(new Category
@@ -43,12 +43,6 @@ namespace HikikomoriWEB.Domain
             modelBuilder.Entity<Category>().HasData(new Category
             {
                 Id = 10004,
-                Name = "Аниме"
-            });
-
-            modelBuilder.Entity<Category>().HasData(new Category
-            {
-                Id = 10005,
                 Name = "Мультфильмы"
             });
         }

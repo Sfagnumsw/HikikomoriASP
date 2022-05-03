@@ -7,13 +7,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HikikomoriWEB.MVC.Models
 {
-    public class Category : EntityBase
+    public class Category
     {
         [Required]
-        [Display(Name = "Название категории")]
-        public override string Name{ get; set; }
+        public int Id { get; set; }
 
-        
-        //public List<Content> Content { get; set; } // контент относящийся к нужной категории
+        [Required]
+        [Display(Name = "Название категории")]
+        public string Name { get; set; }
     }
 }
