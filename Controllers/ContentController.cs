@@ -14,7 +14,17 @@ namespace HikikomoriWEB.Controllers
             _category = cat;
         }
 
-        public ViewResult List()
+        public ViewResult ListFilms() //основная страница фильмов
+        {
+            return View();
+        }
+
+        public ViewResult RateFilms() //оценть просмотренные фильмы
+        {
+            return View();
+        }
+
+        public ViewResult RememberFilms() //запомнить фильмы на будущее
         {
             return View();
         }

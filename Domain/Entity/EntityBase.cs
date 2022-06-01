@@ -13,7 +13,7 @@ namespace HikikomoriWEB.Domain.Entity
         public virtual string Name { get; set; }
 
         [Display(Name = "Категория")]
-        public virtual Category Category { get; set; } //реализовать выбор из нескольких категорий
+        public virtual Category Category { get; set; }
 
         [Display(Name = "Жанр")]
         public string Genre { get; set; }
