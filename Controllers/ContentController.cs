@@ -19,10 +19,12 @@ namespace HikikomoriWEB.Controllers
             return View();
         }
 
-        public ViewResult RateFilms() //оценть просмотренные фильмы
+        public ViewResult RateFilms() //оценить просмотренные фильмы
         {
             return View();
         }
+
+
 
         public ViewResult RememberFilms() //запомнить фильмы на будущее
         {
