@@ -3,6 +3,8 @@ using HikikomoriWEB.MVC.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Web.WebPages.Html;
 
 namespace HikikomoriWEB.Domain.Repository
 {

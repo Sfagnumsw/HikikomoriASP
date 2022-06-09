@@ -1,0 +1,54 @@
+﻿
+<div>
+    <div>
+        <form asp-controller="Home" asp-action="RateContent" method="post">
+            <div asp-validation-summary="All"></div>
+            <div>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div>
+                <label asp-for="Category"></label>
+                <input asp-for="Category" />
+                <span asp-validation-for="Category"></span>
+                    <select name="list1" required>
+                        <option></option>
+                        <option>Option</option>
+                        <option>Textarea</option>
+                        <option>Label</option>
+                        <option>Fieldset</option>
+                        <option>Legend</option>
+                    </select>
+            </div>
+            <div>
+                <label asp-for="Genre"></label>
+                <input asp-for="Genre" />
+                <span asp-validation-for="Genre"></span>
+            </div>
+            <div>
+                <label asp-for="Autor"></label>
+                <input asp-for="Autor" />
+                <span asp-validation-for="Autor"></span>
+            </div>
+            <div>
+                <label asp-for="CreationYear"></label>
+                <input asp-for="CreationYear" />
+                <span asp-validation-for="CreationYear"></span>
+            </div>
+            <div>
+                <label asp-for="Rating"></label>
+                <input asp-for="Rating" />
+                <span asp-validation-for="Rating"></span>
+            </div>
+            <div>
+                <label asp-for="Replay"></label>
+                <input asp-for="Replay" />
+                <span asp-validation-for="Replay"></span>
+            </div>
+            <div>
+                <input type="submit" value="Сохранить" />
+            </div>
+        </form>
+    </div>
+</div>
