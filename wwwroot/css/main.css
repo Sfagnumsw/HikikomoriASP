@@ -54,12 +54,12 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-input, select, textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none; }
-
+/*	input, select, textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+	}*/
 /* Basic */
 html {
   box-sizing: border-box; }
@@ -965,7 +965,6 @@ ul.link-list li {
 .list-inline-item {
   display: inline;
   margin-right: 5px;
-
   /* ������ ����� */ }
 
 /* Large */
@@ -1202,42 +1201,3 @@ ul.link-list li {
     line-height: 1.5em; }
     #copyright a {
       color: #A6A88F; } }
-   /*My style*/
-.type-action-content {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    color: #666;
-    font-family: monospace;
-    font-size: 20px;
-    font-weight: normal;
-}
-.type-action-content a {
-    color: #00bfff; 
-    position: relative;
-    cursor: pointer;
-    text-decoration: none; 
-}
-.type-action-content a:after {
-    content: "";
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: -3px;
-    width: 0;
-    height: 2px; /* Высота линии */
-    background-color: black; /* Цвет подчеркивания при исчезании линии*/
-    transition: width 0.5s; /* Время эффекта */
-}
-.type-action-content a:hover:after {
-    content: "";
-    width: 100%;
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    height: 2px; /* Высота линии */
-    background-color: red; /* Цвет подчеркивания при появлении линии*/
-    transition: width 0.5s; /* Время эффекта */
-    transition: width 0.5s; /* Время эффекта */
-}

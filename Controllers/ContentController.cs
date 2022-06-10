@@ -8,11 +8,12 @@ namespace HikikomoriWEB.Controllers
 {
     public class ContentController : Controller
     {
-        private readonly DataManager dataManager;
+        private readonly IContent _content;
+        private readonly ICategory _category;
         public ContentController(IContent con,ICategory cat)
         {
-            dataManager.Content = con;
-            dataManager.Category = cat;
+            _content = con;
+            _category = cat;
         }
 
         public ViewResult ListFilms() //основная страница фильмов

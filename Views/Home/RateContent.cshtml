@@ -10,16 +10,7 @@
             </div>
             <div>
                 <label asp-for="Category"></label>
-                <input asp-for="Category" />
-                <span asp-validation-for="Category"></span>
-                    <select name="list1" required>
-                        <option></option>
-                        <option>Option</option>
-                        <option>Textarea</option>
-                        <option>Label</option>
-                        <option>Fieldset</option>
-                        <option>Legend</option>
-                    </select>
+                <select asp-for="Category" asp-items="ViewBag.Categ"></select>
             </div>
             <div>
                 <label asp-for="Genre"></label>
