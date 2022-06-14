@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HikikomoriWEB.Domain.Entity
 {
-    public abstract class EntityBase //базовый класс для доменной модели
+    public abstract class EntityBase //базовый класс для доменной модели контента
     {
         [Required]
         public int Id { get; set; }

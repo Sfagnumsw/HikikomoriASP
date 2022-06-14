@@ -11,24 +11,29 @@ namespace HikikomoriWEB.Controllers
     {
         private readonly IContent _content;
         private readonly ICategory _category;
-        public HomeController(IContent con, ICategory cat)
+        private readonly IRemember _remember;
+        public HomeController(IContent con, ICategory cat, IRemember rem)
         {
             _content = con;
             _category = cat;
+            _remember = rem;
         }
         public IActionResult Index()
         {
             return View();
         }
 
-        //[HttpGet]
-        //public IActionResult RateContent()
-        //{
+        #region ФОРМЫ НА ГЛАВНОЙ СТРАНИЦЕ
 
-        //}
+        [HttpGet]
+        public IActionResult RateContent() //оценить
+        {
+            ViewBag.Categ = new SelectList(_category.GetCategories, "Id", "Name");
+            return View();
+        }
 
         [HttpPost]
-        public IActionResult RateContent(Content objCon)
+        public IActionResult RateContent(Content objCon) //оценить
         {
             if (ModelState.IsValid)
             {
@@ -37,5 +42,24 @@ namespace HikikomoriWEB.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public IActionResult RememberContent() //запомнить
+        {
+            ViewBag.Categ = new SelectList(_category.GetCategories, "Id", "Name");
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult RememberContent(Remember obj) //запомнить
+        {
+            if (ModelState.IsValid)
+            {
+                _remember.SaveRemember(obj);
+                return RedirectToAction("Index", "Home");
+            }
+            return View();
+        }
+        #endregion
     }
 }

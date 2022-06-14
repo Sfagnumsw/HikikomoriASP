@@ -10,10 +10,12 @@ namespace HikikomoriWEB.Controllers
     {
         private readonly IContent _content;
         private readonly ICategory _category;
-        public ContentController(IContent con,ICategory cat)
+        private readonly IRemember _remember;
+        public ContentController(IContent con, ICategory cat, IRemember rem)
         {
             _content = con;
             _category = cat;
+            _remember = rem;
         }
 
         public ViewResult ListFilms() //основная страница фильмов

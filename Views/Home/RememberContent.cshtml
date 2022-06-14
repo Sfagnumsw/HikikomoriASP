@@ -1,7 +1,7 @@
 ﻿
 <div>
     <div>
-        <form asp-controller="Home" asp-action="RateContent" method="post">
+        <form asp-controller="Home" asp-action="RememberContent" method="post">
             <div asp-validation-summary="All"></div>
             <div>
                 <label asp-for="Name"></label>
@@ -26,16 +26,6 @@
                 <label asp-for="CreationYear"></label>
                 <input asp-for="CreationYear" />
                 <span asp-validation-for="CreationYear"></span>
-            </div>
-            <div>
-                <label asp-for="Rating"></label>
-                <input asp-for="Rating" />
-                <span asp-validation-for="Rating"></span>
-            </div>
-            <div>
-                <label asp-for="Replay"></label>
-                <input asp-for="Replay" />
-                <span asp-validation-for="Replay"></span>
             </div>
             <div>
                 <input type="submit" value="Сохранить" />
