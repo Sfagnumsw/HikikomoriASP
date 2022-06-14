@@ -21,21 +21,11 @@ namespace HikikomoriWEB.Controllers
             return View();
         }
 
-        IEnumerable<Category> categoryModel = new List<Category>()
-        {
-                new Category {Id = 10000, Name = "Фильмы" },
-                new Category {Id = 10001, Name = "Книги"},
-                new Category {Id = 10002, Name = "Игры"},
-                new Category {Id = 10003, Name = "Сериалы"},
-                new Category {Id = 10004, Name = "Мультфильмы"}
-        };
+        //[HttpGet]
+        //public IActionResult RateContent()
+        //{
 
-        [HttpGet]
-        public IActionResult RateContent()
-        {
-            ViewBag.Categ = new SelectList(categoryModel);
-            return View();
-        }
+        //}
 
         [HttpPost]
         public IActionResult RateContent(Content objCon)

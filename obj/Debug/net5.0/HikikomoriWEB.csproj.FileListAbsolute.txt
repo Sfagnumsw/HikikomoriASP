@@ -165,6 +165,6 @@ C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\Hikikomori
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\appsettings.production.json
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\appsettings.staging.json
-C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.csproj.AssemblyReference.cache
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\ListFilms.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Home\RateContent.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.csproj.AssemblyReference.cache

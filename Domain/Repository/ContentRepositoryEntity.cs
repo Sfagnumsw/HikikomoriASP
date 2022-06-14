@@ -29,10 +29,10 @@ namespace HikikomoriWEB.Domain.Repository
             return context.Content.FirstOrDefault(i => i.Id == ContentId);
         }
 
-        public IEnumerable<Content> GetOnCategoryId(int CategoryId)
-        {
-            return context.Content.Where(i => i.Category.Id == CategoryId);
-        }
+        //public IEnumerable<Content> GetOnCategoryId(int CategoryId)
+        //{
+        //    return context.Content.Where(i => i.CategoryId == CategoryId); // возможно не нужен, можно получить из модели категории поле list...
+        //}
 
         public void SaveContent(Content obj)
         {

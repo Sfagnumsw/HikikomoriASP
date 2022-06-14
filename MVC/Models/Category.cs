@@ -15,5 +15,8 @@ namespace HikikomoriWEB.MVC.Models
         [Required]
         [Display(Name = "Название категории")]
         public string Name { get; set; }
+
+        [Display(Name = "Навигация коллекции")]
+        public List<Content> Contents { get; set; }
     }
 }
