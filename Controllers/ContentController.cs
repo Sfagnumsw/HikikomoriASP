@@ -20,6 +20,36 @@ namespace HikikomoriWEB.Controllers
 
         public ViewResult ListFilms() //основная страница фильмов
         {
+            ViewBag.listRate = _content.GetOnCategoryId(10000);
+            ViewBag.listRemember = _remember.GetOnCategoryId(10000);
+            return View();
+        }
+
+        public ViewResult ListBooks() //основная страница книг
+        {
+            ViewBag.listRate = _content.GetOnCategoryId(10001);
+            ViewBag.listRemember = _remember.GetOnCategoryId(10001);
+            return View();
+        }
+
+        public ViewResult ListSerials() //основная страница сериалов
+        {
+            ViewBag.listRate = _content.GetOnCategoryId(10003);
+            ViewBag.listRemember = _remember.GetOnCategoryId(10003);
+            return View();
+        }
+
+        public ViewResult ListMultfilms() //основная страница мультиков
+        {
+            ViewBag.listRate = _content.GetOnCategoryId(10004);
+            ViewBag.listRemember = _remember.GetOnCategoryId(10004);
+            return View();
+        }
+
+        public ViewResult ListGames() //основная страница игр
+        {
+            ViewBag.listRate = _content.GetOnCategoryId(10002);
+            ViewBag.listRemember = _remember.GetOnCategoryId(10002);
             return View();
         }
     }

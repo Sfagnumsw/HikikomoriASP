@@ -169,3 +169,7 @@ C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\Hikikomori
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Home\RateContent.cshtml.g.cs
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.csproj.AssemblyReference.cache
 C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Home\RememberContent.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\ListBooks.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\ListGames.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\ListMultfilms.cshtml.g.cs
+C:\Users\Sfagnum\Documents\обучение\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\Razor\Views\Content\ListSerials.cshtml.g.cs

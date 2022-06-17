@@ -23,7 +23,7 @@ namespace HikikomoriWEB.Domain.Repository
 
         public IEnumerable<Remember> GetOnCategoryId(int CategoryId)
         {
-            return context.Remember.Where(i => i.CategoryId == CategoryId);
+            return context.Remember.Where(i => i.CategoryId == CategoryId).ToList();
         }
 
         public void SaveRemember(Remember obj)

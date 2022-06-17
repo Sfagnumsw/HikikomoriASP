@@ -952,7 +952,7 @@ ul.link-list li {
 .copyright {
   text-align: center;
   color: #A6A88F;
-  border-top: solid 1px #ced0b7;
+  /*border-top: solid 1px #ced0b7;*/
   padding: 3em 0 0 0;
   margin: 3em 0 0 0; }
   .copyright a {

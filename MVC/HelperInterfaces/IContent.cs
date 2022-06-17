@@ -12,6 +12,6 @@ namespace HikikomoriWEB.MVC.HelperInterfaces
         Content GetOnId(int ContentId); //контент по ID
         void SaveContent(Content obj); //сохранить
         void DeliteContent(int ContentId); //удалить
-        //IEnumerable<Content> GetOnCategoryId(int CategoryId); // получить весь контент из определенной категории
+        IEnumerable<Content> GetOnCategoryId(int CategoryId); // получить весь контент из определенной категории
     }
 }
