@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sfagnum\\Documents\\обучение\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj": {}
+    "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sfagnum\\Documents\\обучение\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj": {
+    "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sfagnum\\Documents\\обучение\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj",
+        "projectUniqueName": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj",
         "projectName": "HikikomoriWEB",
-        "projectPath": "C:\\Users\\Sfagnum\\Documents\\обучение\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj",
+        "projectPath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj",
         "packagesPath": "C:\\Users\\Sfagnum\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sfagnum\\Documents\\обучение\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\obj\\",
+        "outputPath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
