@@ -348,3 +348,4 @@ C:\Users\Sfagnum\Documents\обучение\Программирование\C#\
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\ref\HikikomoriWEB.dll
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.pdb
 C:\Users\Sfagnum\Documents\обучение\Программирование\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\obj\Debug\net5.0\HikikomoriWEB.genruntimeconfig.cache
+C:\Users\Sfagnum\Documents\обучение\Программирование\C#\eaxDeskTop\HikomoriASP\HikikomoriWEB\bin\Debug\net5.0\RestSharp.dll

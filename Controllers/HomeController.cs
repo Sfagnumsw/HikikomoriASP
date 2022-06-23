@@ -1,9 +1,9 @@
-﻿using HikikomoriWEB.Domain;
-using HikikomoriWEB.MVC.HelperInterfaces;
+﻿using HikikomoriWEB.MVC.HelperInterfaces;
 using HikikomoriWEB.MVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+
 
 namespace HikikomoriWEB.Controllers
 {
@@ -12,16 +12,27 @@ namespace HikikomoriWEB.Controllers
         private readonly IContent _content;
         private readonly ICategory _category;
         private readonly IRemember _remember;
-        public HomeController(IContent con, ICategory cat, IRemember rem)
+        //private readonly IRestAPI _request;
+        public HomeController(IContent con, ICategory cat, IRemember rem/*, IRestAPI req*/)
         {
             _content = con;
             _category = cat;
             _remember = rem;
+            //_request = req;
         }
         public IActionResult Index()
         {
             return View();
         }
+
+        //public IActionResult SidebarPartial()
+        //{
+        //    var data = _request.GetQuote();
+        //    ViewData["Quote"] = data["quote"].Value<string>();
+        //    ViewData["Character"] = data["character"].Value<string>();
+        //    ViewData["Show"] = data["show"].Value<string>();
+        //    return View();
+        //}
 
         #region ФОРМЫ НА ГЛАВНОЙ СТРАНИЦЕ
 
