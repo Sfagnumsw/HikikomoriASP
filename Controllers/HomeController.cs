@@ -12,27 +12,22 @@ namespace HikikomoriWEB.Controllers
         private readonly IContent _content;
         private readonly ICategory _category;
         private readonly IRemember _remember;
-        //private readonly IRestAPI _request;
-        public HomeController(IContent con, ICategory cat, IRemember rem/*, IRestAPI req*/)
+        private readonly IRestAPI _api;
+        public HomeController(IContent con, ICategory cat, IRemember rem, IRestAPI api)
         {
             _content = con;
             _category = cat;
             _remember = rem;
-            //_request = req;
+            _api = api;
         }
         public IActionResult Index()
         {
+            var data = _api.GetQuote();
+            ViewData["Quote"] = data["quote"].Value<string>();
+            ViewData["Character"] = data["character"].Value<string>();
+            ViewData["Show"] = data["show"].Value<string>();
             return View();
         }
-
-        //public IActionResult SidebarPartial()
-        //{
-        //    var data = _request.GetQuote();
-        //    ViewData["Quote"] = data["quote"].Value<string>();
-        //    ViewData["Character"] = data["character"].Value<string>();
-        //    ViewData["Show"] = data["show"].Value<string>();
-        //    return View();
-        //}
 
         #region ФОРМЫ НА ГЛАВНОЙ СТРАНИЦЕ
 
