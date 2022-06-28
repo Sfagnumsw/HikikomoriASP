@@ -20,7 +20,7 @@ namespace HikikomoriWEB.Controllers
             _remember = rem;
             _api = api;
         }
-        public IActionResult Index()
+        public IActionResult Index() //api
         {
             var data = _api.GetQuote();
             ViewData["Quote"] = data["quote"].Value<string>();
