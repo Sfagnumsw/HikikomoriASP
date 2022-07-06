@@ -1,9 +1,9 @@
-﻿using HikikomoriWEB.Domain;
-using HikikomoriWEB.MVC.HelperInterfaces;
+﻿using HikikomoriWEB.MVC.HelperInterfaces;
 using HikikomoriWEB.MVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+
 
 namespace HikikomoriWEB.Controllers
 {
@@ -12,14 +12,18 @@ namespace HikikomoriWEB.Controllers
         private readonly IContent _content;
         private readonly ICategory _category;
         private readonly IRemember _remember;
-        public HomeController(IContent con, ICategory cat, IRemember rem)
+        private readonly IRestAPI _api;
+        public HomeController(IContent con, ICategory cat, IRemember rem, IRestAPI api)
         {
             _content = con;
             _category = cat;
             _remember = rem;
+            _api = api;
         }
-        public IActionResult Index()
+ 
+        public IActionResult Index() //api
         {
+            //ViewBag.Quote = QuoteAPI();
             return View();
         }
 
@@ -28,6 +32,7 @@ namespace HikikomoriWEB.Controllers
         [HttpGet]
         public IActionResult RateContent() //оценить
         {
+            //ViewBag.Quote = QuoteAPI();
             ViewBag.Categ = new SelectList(_category.GetCategories, "Id", "Name");
             return View();
         }
@@ -46,6 +51,7 @@ namespace HikikomoriWEB.Controllers
         [HttpGet]
         public IActionResult RememberContent() //запомнить
         {
+            //ViewBag.Quote = QuoteAPI();
             ViewBag.Categ = new SelectList(_category.GetCategories, "Id", "Name");
             return View();
         }
@@ -61,5 +67,23 @@ namespace HikikomoriWEB.Controllers
             return View();
         }
         #endregion
+
+        #region support
+        public ResponseModel QuoteAPI() //заполнение объекта модели ответа запроса
+        {
+            var data = _api.GetQuote();
+            ResponseModel model = new ResponseModel()
+            {
+                Quote = data["quote"].Value<string>(),
+                Character = data["character"].Value<string>(),
+                Show = data["show"].Value<string>()
+            };
+            return model;
+        }
+
+
     }
+        #endregion
+
+    
 }

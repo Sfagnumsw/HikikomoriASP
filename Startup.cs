@@ -26,6 +26,7 @@ namespace HikikomoriWEB
             services.AddTransient<IContent, ContentRepositoryEntity>(); //подключение функционала
             services.AddTransient<ICategory, CategoryRepositoryEntity>();
             services.AddTransient<IRemember, RememberRepositoryEntity>();
+            services.AddTransient<IRestAPI, ConnectionQuoteAPI>();
             services.AddTransient<DataManager>();
 
             services.AddDbContext<AppDbContext>(i => i.UseSqlServer(Config.ConnectionString)); //подключение контекста БД
