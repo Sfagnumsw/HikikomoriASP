@@ -23,11 +23,7 @@ namespace HikikomoriWEB.Controllers
 
         public ViewResult ListFilms() //основная страница фильмов
         {
-            var data = _api.GetQuote();
-            ViewData["Quote"] = data["quote"].Value<string>();
-            ViewData["Character"] = data["character"].Value<string>();
-            ViewData["Show"] = data["show"].Value<string>();
-
+            //ViewBag.Quote = QuoteAPI();
             ViewBag.listRate = _content.GetOnCategoryId(10000);
             ViewBag.listRemember = _remember.GetOnCategoryId(10000);
             return View();
@@ -35,11 +31,7 @@ namespace HikikomoriWEB.Controllers
 
         public ViewResult ListBooks() //основная страница книг
         {
-            var data = _api.GetQuote();
-            ViewData["Quote"] = data["quote"].Value<string>();
-            ViewData["Character"] = data["character"].Value<string>();
-            ViewData["Show"] = data["show"].Value<string>();
-
+            //ViewBag.Quote = QuoteAPI();
             ViewBag.listRate = _content.GetOnCategoryId(10001);
             ViewBag.listRemember = _remember.GetOnCategoryId(10001);
             return View();
@@ -47,11 +39,7 @@ namespace HikikomoriWEB.Controllers
 
         public ViewResult ListSerials() //основная страница сериалов
         {
-            var data = _api.GetQuote();
-            ViewData["Quote"] = data["quote"].Value<string>();
-            ViewData["Character"] = data["character"].Value<string>();
-            ViewData["Show"] = data["show"].Value<string>();
-
+            //ViewBag.Quote = QuoteAPI();
             ViewBag.listRate = _content.GetOnCategoryId(10003);
             ViewBag.listRemember = _remember.GetOnCategoryId(10003);
             return View();
@@ -59,11 +47,7 @@ namespace HikikomoriWEB.Controllers
 
         public ViewResult ListMultfilms() //основная страница мультиков
         {
-            var data = _api.GetQuote();
-            ViewData["Quote"] = data["quote"].Value<string>();
-            ViewData["Character"] = data["character"].Value<string>();
-            ViewData["Show"] = data["show"].Value<string>();
-
+            //ViewBag.Quote = QuoteAPI();
             ViewBag.listRate = _content.GetOnCategoryId(10004);
             ViewBag.listRemember = _remember.GetOnCategoryId(10004);
             return View();
@@ -71,14 +55,24 @@ namespace HikikomoriWEB.Controllers
 
         public ViewResult ListGames() //основная страница игр
         {
-            var data = _api.GetQuote();
-            ViewData["Quote"] = data["quote"].Value<string>();
-            ViewData["Character"] = data["character"].Value<string>();
-            ViewData["Show"] = data["show"].Value<string>();
-
+            //ViewBag.Quote = QuoteAPI();
             ViewBag.listRate = _content.GetOnCategoryId(10002);
             ViewBag.listRemember = _remember.GetOnCategoryId(10002);
             return View();
         }
+
+        #region support
+        public ResponseModel QuoteAPI() //заполнение объекта модели ответа запроса
+        {
+            var data = _api.GetQuote();
+            ResponseModel model = new ResponseModel()
+            {
+                Quote = data["quote"].Value<string>(),
+                Character = data["character"].Value<string>(),
+                Show = data["show"].Value<string>()
+            };
+            return model;
+        }
+        #endregion
     }
 }

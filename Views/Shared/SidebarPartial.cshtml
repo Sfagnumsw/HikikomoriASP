@@ -3,16 +3,13 @@
     <section class="sidebar">
         <h2>Случайная цитата</h2>
         <ul class="small-image-list">         
-              <li>
-                    <h4>@ViewData["Character"]</h4>
-                    <h4>@ViewData["Quote"]</h4>
-                    <h5>@ViewData["Show"]</h5>
-              </li>
-              <li>
-                    <a href="#"><img src="images/pic1.jpg" alt="" class="left" /></a>
-                    <h4>James Doe</h4>
-                    <p>Vitae magna eget odio amet mollis justo facilisis amet quis. Sed sagittis consequat.</p>
-              </li>
+            @*<li>
+                @{ResponseModel response = (ResponseModel)ViewBag.Quote;
+                <h4>@response.Character</h4>
+                    <h4>@response.Quote</h4>
+                    <h4>Show: @response.Show</h4>
+                    }
+            </li>*@
         </ul>
     </section>
 </div>

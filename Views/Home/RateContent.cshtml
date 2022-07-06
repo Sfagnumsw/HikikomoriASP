@@ -1,44 +1,40 @@
 ﻿
 <div>
-    <div>
-        <form asp-controller="Home" asp-action="RateContent" method="post">
+    <div class="rate-form-block">
+        <form asp-controller="Home" asp-action="RateContent" method="post" class="remember-form">
             <div asp-validation-summary="All"></div>
             <div>
-                <label asp-for="Name"></label>
-                <input asp-for="Name" />
+                <input asp-for="Name" placeholder="Название" class="txt-input"/>
                 <span asp-validation-for="Name"></span>
             </div>
             <div>
-                <label asp-for="CategoryId"></label>
-                <select asp-for="CategoryId" asp-items="ViewBag.Categ"></select>
+                <select asp-for="CategoryId" asp-items="ViewBag.Categ" class="txt-input">
+                    <option value"" disabled="disabled" selected="selected">Категория</option>
+                </select>
             </div>
             <div>
-                <label asp-for="Genre"></label>
-                <input asp-for="Genre" />
+                <input asp-for="Genre"  placeholder="Жанр" class="txt-input">
                 <span asp-validation-for="Genre"></span>
             </div>
             <div>
-                <label asp-for="Autor"></label>
-                <input asp-for="Autor" />
+                <input asp-for="Autor"  placeholder="Автор" class="txt-input">
                 <span asp-validation-for="Autor"></span>
             </div>
             <div>
-                <label asp-for="CreationYear"></label>
-                <input asp-for="CreationYear" />
+                <input asp-for="CreationYear" placeholder="Год выпуска" class="txt-input"/>
                 <span asp-validation-for="CreationYear"></span>
             </div>
             <div>
-                <label asp-for="Rating"></label>
-                <input asp-for="Rating" />
+                <input asp-for="Rating" placeholder="Оценка" class="txt-input"/>
                 <span asp-validation-for="Rating"></span>
             </div>
             <div>
-                <label asp-for="Replay"></label>
                 <input asp-for="Replay" />
+                <label>Избранное</label>
                 <span asp-validation-for="Replay"></span>
             </div>
             <div>
-                <input type="submit" value="Сохранить" />
+                <input type="submit" value="Сохранить" class="button-sub"/>
             </div>
         </form>
     </div>

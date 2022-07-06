@@ -53,7 +53,7 @@
 	}
 
 	ol, ul {
-		/*list-style: none;*/
+		list-style: none;
 	}
 
 	blockquote,	q {
@@ -296,6 +296,7 @@
 	height: 86px;
 
 	h1 {
+		font-family: 'Open Sans', sans-serif;
 		position: absolute;
 		left: 40px;
 		top: 0;
@@ -878,7 +879,64 @@
 	color: #4C364D
 }
 
+/*.remember-form-block{
+	width:320px;
+	left: 50%;
+	top: 50%;
+}*/
+
+.remember-form {
+	margin: 0 auto;
+	max-width: 95%;
+	box-sizing: border-box;
+	padding: 40px;
+	border-radius: 5px;
+	background: RGBA(255,255,255,1);
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+}
+
+.txt-input {
+	height: 50px;
+	width: 100%;
+	border-radius: 3px;
+	border: rgba(0,0,0,.3) 2px solid;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	padding: 10px;
+	margin-bottom: 30px;
+	color: #FECB20;
+}
+
+.txt-input:focus {
+	outline: none;
+	border: #F7A992 2px solid;
+	color: #F7A992;
+}
+
+.button-sub {
+	height: 50px;
+	width: 100%;
+	border-radius: 3px;
+	border: #F7A992 1px solid;
+	box-sizing: border-box;
+	padding: 10px;
+	background: #ffffff;
+	color: #FECB20;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16pt;
+	transition: background .4s;
+	cursor: pointer;
+}
+.button-sub:hover {
+	text-decoration: none;
+	background: #F7A992;
+	text-shadow: 0 1px 1px #000
+}
 .sidebar h2 {
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	color: #FECB20;
 }

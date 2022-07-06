@@ -20,12 +20,10 @@ namespace HikikomoriWEB.Controllers
             _remember = rem;
             _api = api;
         }
+ 
         public IActionResult Index() //api
         {
-            var data = _api.GetQuote();
-            ViewData["Quote"] = data["quote"].Value<string>();
-            ViewData["Character"] = data["character"].Value<string>();
-            ViewData["Show"] = data["show"].Value<string>();
+            //ViewBag.Quote = QuoteAPI();
             return View();
         }
 
@@ -34,6 +32,7 @@ namespace HikikomoriWEB.Controllers
         [HttpGet]
         public IActionResult RateContent() //оценить
         {
+            //ViewBag.Quote = QuoteAPI();
             ViewBag.Categ = new SelectList(_category.GetCategories, "Id", "Name");
             return View();
         }
@@ -52,6 +51,7 @@ namespace HikikomoriWEB.Controllers
         [HttpGet]
         public IActionResult RememberContent() //запомнить
         {
+            //ViewBag.Quote = QuoteAPI();
             ViewBag.Categ = new SelectList(_category.GetCategories, "Id", "Name");
             return View();
         }
@@ -67,5 +67,23 @@ namespace HikikomoriWEB.Controllers
             return View();
         }
         #endregion
+
+        #region support
+        public ResponseModel QuoteAPI() //заполнение объекта модели ответа запроса
+        {
+            var data = _api.GetQuote();
+            ResponseModel model = new ResponseModel()
+            {
+                Quote = data["quote"].Value<string>(),
+                Character = data["character"].Value<string>(),
+                Show = data["show"].Value<string>()
+            };
+            return model;
+        }
+
+
     }
+        #endregion
+
+    
 }
