@@ -29,8 +29,9 @@
                 <span asp-validation-for="Rating"></span>
             </div>
             <div>
-                <input asp-for="Replay" />
-                <label>Избранное</label>
+                <label class="label-check">Добавить в избранное</label>
+                <input id="cbx" style="display:none" asp-for="Replay" />
+                <label for="cbx" class="toggle-check"><span></span></label>
                 <span asp-validation-for="Replay"></span>
             </div>
             <div>
