@@ -18,7 +18,7 @@ namespace HikikomoriWEB.Domain.Repository
 
         public IEnumerable<Content> AllContent => context.Content; // полный список контента
 
-        public void DeliteContent(int Contentid) // удалить
+        public void DeleteContent(int Contentid) // удалить
         {
             context.Content.Remove(new Content() { Id = Contentid });
             context.SaveChanges();

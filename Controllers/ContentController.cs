@@ -21,6 +21,12 @@ namespace HikikomoriWEB.Controllers
             _api = api;
         }
 
+        public ViewResult DeleteContent(int ContentId)
+        {
+            _content.DeleteContent(ContentId);
+            return View();
+        }
+        #region Таблицы с контентом
         public ViewResult ListFilms() //основная страница фильмов
         {
             //ViewBag.Quote = QuoteAPI();
@@ -60,9 +66,10 @@ namespace HikikomoriWEB.Controllers
             ViewBag.listRemember = _remember.GetOnCategoryId(10002);
             return View();
         }
+        #endregion
 
         #region support
-        public ResponseModel QuoteAPI() //заполнение объекта модели ответа запроса
+        public ResponseModel QuoteAPI() //заполнение объекта модели ответа от API
         {
             var data = _api.GetQuote();
             ResponseModel model = new ResponseModel()

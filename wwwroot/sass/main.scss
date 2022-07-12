@@ -745,6 +745,7 @@
 			}
 	}
 .table-list-rate {
+	text-align: center;
 	width: 100%;
 	margin-bottom: 20px;
 	border: 5px solid #fff;
@@ -756,7 +757,7 @@
 	background: #fff !important;
 
 	caption {
-		color: #4C364D;
+		color: #007897;
 		font-size: 18px;
 	}
 }
@@ -773,49 +774,74 @@
 .table-list-rate td {
 	padding: 7px;
 	border: none;
-	border-top: 3px solid #fff;
-	border-bottom: 3px solid #fff;
+	border-left: 2px solid #F7A992;
+	border-right: 2px solid #F7A992;
+	border-top: 2px solid #F7A992;
+	border-bottom: 2px solid #F7A992;
 	font-size: 15px;
 }
 .table-list-rate tbody:nth-child(even) {
 	background: #f8f8f8 !important;
 }
 
+.table-list-rate tr:hover {
+	content: '';
+	position: relative;
+	border-top: 2px solid #FF0000;
+	border-bottom: 2px solid #FF0000;
+}
+
 .table-list-remember {
+	text-align: center;
 	width: 100%;
 	margin-bottom: 20px;
 	border: 5px solid #fff;
 	border-top: 5px solid #fff;
 	border-bottom: 3px solid #fff;
 	border-collapse: collapse;
-	outline: 3px solid #FDF0C4;
+	outline: 3px solid #ffcbd9;
 	font-size: 15px;
 	background: #fff !important;
 
 	caption {
-		color: #4C364D;
-		font-size:18px;
+		color: #007897;
+		font-size: 18px;
 	}
 }
 .table-list-remember th {
 	font-weight: bold;
 	padding: 7px;
-	background: #FDF0C4;
+	background: #ffcbd9;
 	border: none;
 	text-align: center;
 	font-size: 15px;
 	border-top: 3px solid #fff;
-	border-bottom: 3px solid #FDF0C4;
+	border-bottom: 3px solid #ffcbd9;
 }
 .table-list-remember td {
 	padding: 7px;
 	border: none;
-	border-top: 3px solid #fff;
-	border-bottom: 3px solid #fff;
+	border-top: 2px solid #ffcbd9;
+	border-bottom: 2px solid #ffcbd9;
+	border-left: 2px solid #ffcbd9;
+	border-right: 2px solid #ffcbd9;
 	font-size: 15px;
 }
 .table-list-remember tbody:nth-child(even) {
 	background: #f8f8f8 !important;
+}
+
+.table-list-remember tr:hover {
+	content: '';
+	position: relative;
+	border-top: 2px solid #FF0000;
+	border-bottom: 2px solid #FF0000;
+}
+
+.active {
+	content: '';
+	position: relative;
+	background: #FECB20;
 }
 
 .type-action-content {
@@ -1031,5 +1057,7 @@
 	font-size: 18px;
 }
 
+.delete-button{
 
+}
 

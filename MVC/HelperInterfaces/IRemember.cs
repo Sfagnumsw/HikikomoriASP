@@ -10,7 +10,7 @@ namespace HikikomoriWEB.MVC.HelperInterfaces
     {
         IEnumerable<Remember> AllRemember { get; } //получить контент
         void SaveRemember(Remember obj); //сохранить
-        void DeliteRemember(int RememberId); //удалить
+        void DeleteRemember(int RememberId); //удалить
         IEnumerable<Remember> GetOnCategoryId(int CategoryId); // получить весь контент из определенной категории
     }
 }

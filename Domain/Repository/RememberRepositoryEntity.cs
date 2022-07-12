@@ -15,7 +15,7 @@ namespace HikikomoriWEB.Domain.Repository
         }
         public IEnumerable<Remember> AllRemember => context.Remember;
 
-        public void DeliteRemember(int RememberId)
+        public void DeleteRemember(int RememberId)
         {
             context.Remember.Remove(new Remember() { Id = RememberId });
             context.SaveChanges();
