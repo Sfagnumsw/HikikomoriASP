@@ -839,6 +839,7 @@
 }
 
 .active {
+	visibility: visible;
 	content: '';
 	position: relative;
 	background: #FECB20;

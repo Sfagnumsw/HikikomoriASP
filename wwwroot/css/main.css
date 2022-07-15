@@ -1254,6 +1254,7 @@ article.blog-post {
   border-bottom: 2px solid #FF0000; }
 
 .active {
+  visibility: visible;
   content: '';
   position: relative;
   background: #FECB20; }
