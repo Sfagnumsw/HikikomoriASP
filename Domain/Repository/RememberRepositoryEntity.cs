@@ -3,6 +3,7 @@ using HikikomoriWEB.MVC.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace HikikomoriWEB.Domain.Repository
 {
@@ -13,20 +14,20 @@ namespace HikikomoriWEB.Domain.Repository
         {
             this.context = context;
         }
-        public IEnumerable<Remember> AllRemember => context.Remember;
+        public async Task<IEnumerable<Remember>> AllRemember() => await context.Remember.ToListAsync();
 
-        public void DeleteRemember(int RememberId)
+        public async Task DeleteRemember(int RememberId)
         {
             context.Remember.Remove(new Remember() { Id = RememberId });
-            context.SaveChanges();
+            await context.SaveChangesAsync();
         }
 
-        public IEnumerable<Remember> GetOnCategoryId(int CategoryId)
+        public async Task<IEnumerable<Remember>> GetOnCategoryId(int CategoryId)
         {
-            return context.Remember.Where(i => i.CategoryId == CategoryId).ToList();
+            return await context.Remember.Where(i => i.CategoryId == CategoryId).ToListAsync();
         }
 
-        public void SaveRemember(Remember obj)
+        public async Task SaveRemember(Remember obj)
         {
             if (obj.Id == default)
             {
@@ -36,7 +37,7 @@ namespace HikikomoriWEB.Domain.Repository
             {
                 context.Entry(obj).State = EntityState.Modified;
             }
-            context.SaveChanges();
+            await context.SaveChangesAsync();
         }
     }
 }

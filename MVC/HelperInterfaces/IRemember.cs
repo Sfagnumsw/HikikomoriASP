@@ -8,9 +8,9 @@ namespace HikikomoriWEB.MVC.HelperInterfaces
 {
     public interface IRemember // контент который надо отложить на будущее,еще не смотрел
     {
-        IEnumerable<Remember> AllRemember { get; } //получить контент
-        void SaveRemember(Remember obj); //сохранить
-        void DeleteRemember(int RememberId); //удалить
-        IEnumerable<Remember> GetOnCategoryId(int CategoryId); // получить весь контент из определенной категории
+        Task<IEnumerable<Remember>> AllRemember(); //получить контент
+        Task SaveRemember(Remember obj); //сохранить
+        Task DeleteRemember(int RememberId); //удалить
+        Task<IEnumerable<Remember>> GetOnCategoryId(int CategoryId); // получить весь контент из определенной категории
     }
 }

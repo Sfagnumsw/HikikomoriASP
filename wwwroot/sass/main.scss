@@ -50,6 +50,8 @@
 
 	body {
 		line-height: 1;
+		height: 100%;
+		width: 100%;
 	}
 
 	ol, ul {
@@ -396,9 +398,16 @@
 
 .copyright {
 	text-align: center;
-	color: #4C364D;
-	/*padding: 3em 0 0 0;
-		margin: 3em 0 0 0;*/
+
+	ul {
+		margin: 0;
+		padding: 4px;
+	}
+
+	li {
+		display: inline;
+		margin-right: 5px;
+	}
 
 	a {
 		color: #4C364D;
@@ -760,26 +769,36 @@
 		color: #007897;
 		font-size: 18px;
 	}
+
+	.ico {
+		margin-left: 15px;
+		width: 13px;
+		height: 13px;
+		position: relative;
+	}
+
+	th {
+		font-weight: bold;
+		padding: 7px;
+		background: #F7A992;
+		border: none;
+		text-align: center;
+		font-size: 15px;
+		border-top: 3px solid #fff;
+		border-bottom: 3px solid #F7A992;
+	}
+
+	td {
+		padding: 7px;
+		border: none;
+		border-left: 2px solid #F7A992;
+		border-right: 2px solid #F7A992;
+		border-top: 2px solid #F7A992;
+		border-bottom: 2px solid #F7A992;
+		font-size: 15px;
+	}
 }
-.table-list-rate th {
-	font-weight: bold;
-	padding: 7px;
-	background: #F7A992;
-	border: none;
-	text-align: center;
-	font-size: 15px;
-	border-top: 3px solid #fff;
-	border-bottom: 3px solid #F7A992;
-}
-.table-list-rate td {
-	padding: 7px;
-	border: none;
-	border-left: 2px solid #F7A992;
-	border-right: 2px solid #F7A992;
-	border-top: 2px solid #F7A992;
-	border-bottom: 2px solid #F7A992;
-	font-size: 15px;
-}
+
 .table-list-rate tbody:nth-child(even) {
 	background: #f8f8f8 !important;
 }
@@ -807,26 +826,29 @@
 		color: #007897;
 		font-size: 18px;
 	}
+
+	th {
+		font-weight: bold;
+		padding: 7px;
+		background: #ffcbd9;
+		border: none;
+		text-align: center;
+		font-size: 15px;
+		border-top: 3px solid #fff;
+		border-bottom: 3px solid #ffcbd9;
+	}
+
+	td {
+		padding: 7px;
+		border: none;
+		border-top: 2px solid #ffcbd9;
+		border-bottom: 2px solid #ffcbd9;
+		border-left: 2px solid #ffcbd9;
+		border-right: 2px solid #ffcbd9;
+		font-size: 15px;
+	}
 }
-.table-list-remember th {
-	font-weight: bold;
-	padding: 7px;
-	background: #ffcbd9;
-	border: none;
-	text-align: center;
-	font-size: 15px;
-	border-top: 3px solid #fff;
-	border-bottom: 3px solid #ffcbd9;
-}
-.table-list-remember td {
-	padding: 7px;
-	border: none;
-	border-top: 2px solid #ffcbd9;
-	border-bottom: 2px solid #ffcbd9;
-	border-left: 2px solid #ffcbd9;
-	border-right: 2px solid #ffcbd9;
-	font-size: 15px;
-}
+
 .table-list-remember tbody:nth-child(even) {
 	background: #f8f8f8 !important;
 }
@@ -853,33 +875,31 @@
 	color: #fff;
 
 	p {
-		color:#007897;
+		color: #007897;
 	}
-}
 
-.type-action-content ul {
-	margin: 30px auto 0;
-	list-style: none;
-	display:inline;
-/*	display: flex;
-	flex-direction: row;*/
-	justify-content: space-between;
-	text-align: center;
-	max-width: 400px;
-}
+	ul {
+		margin: 30px auto 0;
+		list-style: none;
+		display: inline;
+		justify-content: space-between;
+		text-align: center;
+		max-width: 400px;
+	}
 
-.type-action-content li {
-	position: relative;
-	padding: 10px;
-}
+	li {
+		position: relative;
+		padding: 10px;
+	}
 
-.type-action-content a {
-	color: #4C364D;
-	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: .25em;
-	padding: 10px;
-	position: relative;
+	a {
+		color: #4C364D;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: .25em;
+		padding: 10px;
+		position: relative;
+	}
 }
 
 .type-action-content a:hover::after {
@@ -900,31 +920,15 @@
 	width: 0;
 }
 
-.list-inline {
-	margin: 0;
-	padding: 4px;
-}
-
-.list-inline-item {
-	display: inline;
-	margin-right: 5px; /* Отступ слева */
-}
-
 .small-image-list {
 	color: #4C364D;
-}
 
-.small-image-list h4 {
-	text-align: center;
-	font-size: medium;
-	color: #4C364D
+	h4 {
+		text-align: center;
+		font-size: medium;
+		color: #4C364D
+	}
 }
-
-/*.remember-form-block{
-	width:320px;
-	left: 50%;
-	top: 50%;
-}*/
 
 .remember-form {
 	margin: 0 auto;
@@ -1058,7 +1062,17 @@
 	font-size: 18px;
 }
 
-.delete-button{
-
+.delete-button {
+	position: relative;
+	left: 100%;
+	width: 35px;
+	height: 35px;
+	margin-bottom: 15px;
+	border: 1px solid #FECB20;
+	border-radius: 10px;
+	background: url("../images/del2.png") center no-repeat;
 }
 
+.delete-button:hover {
+	box-shadow: 0px 0px 17px 0px #FECB20;
+}

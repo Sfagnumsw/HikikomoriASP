@@ -1,7 +1,8 @@
 ﻿using HikikomoriWEB.MVC.HelperInterfaces;
 using HikikomoriWEB.MVC.Models;
 using System.Collections.Generic;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace HikikomoriWEB.Domain.Repository
 {
@@ -13,10 +14,11 @@ namespace HikikomoriWEB.Domain.Repository
             this.context = context;
         }
 
-        public IEnumerable<Category> GetCategories => context.Category;
-        public Category GetOnId(int Categoryid)
+        public async Task<IEnumerable<Category>> GetCategories() => await context.Category.ToListAsync(); //полный список категорий
+
+        public async Task<Category> GetOnId(int Categoryid)
         {
-            return context.Category.FirstOrDefault(i => i.Id == Categoryid);
+            return await context.Category.FirstOrDefaultAsync(i => i.Id == Categoryid);
         }
     }
 }

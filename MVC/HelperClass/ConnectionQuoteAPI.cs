@@ -9,7 +9,6 @@ namespace HikikomoriWEB.MVC.HelperClass
 {
     public class ConnectionQuoteAPI : IRestAPI
     {
-
         public JObject GetQuote()
         {
             RestClient client = new RestClient("https://movies-quotes.p.rapidapi.com/quote");

@@ -4,16 +4,16 @@
         <form asp-controller="Home" asp-action="RememberContent" method="post" class="remember-form">
             <div asp-validation-summary="All"></div>
             <div>
-                <input asp-for="Name"  placeholder="Название" class="txt-input"/>
+                <input asp-for="Name" placeholder="Название" class="txt-input" />
                 <span asp-validation-for="Name"></span>
             </div>
             <div>
                 <select asp-for="CategoryId" asp-items="ViewBag.Categ" class="txt-input">
-                <option value"" disabled="disabled" selected="selected">Категория</option>
+                    <option value"" disabled="disabled" selected="selected">Категория</option>
                 </select>
             </div>
             <div>
-                <input asp-for="Genre" placeholder="Жанр" class="txt-input"/>
+                <input asp-for="Genre" placeholder="Жанр" class="txt-input" />
                 <span asp-validation-for="Genre"></span>
             </div>
             <div>
@@ -25,7 +25,7 @@
                 <span asp-validation-for="CreationYear"></span>
             </div>
             <div>
-                <input type="submit" value="Сохранить" class="button-sub"/>
+                <input type="submit" value="Сохранить" class="button-sub" />
             </div>
         </form>
     </div>
