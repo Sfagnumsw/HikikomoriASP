@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HikikomoriWEB.Domain.Entity;
 
-namespace HikikomoriWEB.MVC.Models
+namespace HikikomoriWEB.Domain.Entity
 {
-    public class Remember : EntityBase
+    public class UsersDataAutorisation
     {
-
     }
 }

@@ -30,6 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Domain\Repository\" />
+    <Folder Include="Services\HelperMethods\" />
+    <Folder Include="Services\QuoteApiConnection\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 

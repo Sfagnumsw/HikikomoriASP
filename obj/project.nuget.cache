@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6qMlOeNIMpJsvt2qNG3ebres1XMq1H5gqEUvWNbclQ83dT+377WedkIe2aIjF6i3u2QAVV1X7RVUrWcerLuE1Q==",
+  "dgSpecHash": "duq7ZxP3rVd0SqeT+rLqeV2D/tIuB7/0CYMGclCJBT3A6orURLCIqVFS/ZlW9Astgf5etampJXznAQ4koyVLFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj",
+  "projectFilePath": "C:\\Users\\Sfagnum\\Documents\\обучение\\Программирование\\C#\\ASP.NET Core\\eaxDeskTop\\HikomoriASP\\HikikomoriWEB\\HikikomoriWEB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sfagnum\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\Sfagnum\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
