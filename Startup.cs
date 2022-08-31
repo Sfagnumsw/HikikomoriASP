@@ -1,15 +1,12 @@
-using HikikomoriWEB.MVC.HelperClass;
-using HikikomoriWEB.MVC.HelperInterfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using HikikomoriWEB.Domain.Repository;
 using HikikomoriWEB.Domain;
 using Microsoft.EntityFrameworkCore;
+using HikikomoriWEB.Services;
 
 namespace HikikomoriWEB
 {
@@ -23,10 +20,8 @@ namespace HikikomoriWEB
       
             //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации через configure(отключаем эндпоинт)
 
-            services.AddTransient<IContent, ContentRepositoryEntity>(); //подключение функционала
-            services.AddTransient<ICategory, CategoryRepositoryEntity>();
-            services.AddTransient<IRemember, RememberRepositoryEntity>();
-            services.AddTransient<IRestAPI, ConnectionQuoteAPI>();
+            //services.AddTransient<>(); //подключение функционала
+           
             services.AddTransient<DataManager>();
 
             services.AddDbContext<AppDbContext>(i => i.UseSqlServer(Config.ConnectionString)); //подключение контекста БД

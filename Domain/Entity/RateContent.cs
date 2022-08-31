@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace HikikomoriWEB.Domain.Entity
 {
-    public class RateContent
+    public class RateContent : AbstractContent
     {
+        [Display(Name = "Флаг пересмотра")]
+        public bool Replay { get; set; }
+
+        [Display(Name = "Оценка")]
+        public int Rating { get; set; } 
     }
 }

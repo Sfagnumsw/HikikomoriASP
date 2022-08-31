@@ -1,9 +1,5 @@
-﻿using HikikomoriWEB.MVC.Models;
+﻿using HikikomoriWEB.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HikikomoriWEB.Domain
 {
@@ -11,39 +7,54 @@ namespace HikikomoriWEB.Domain
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Content> Content { get; set; } // таблица
-        public DbSet<Category> Category { get; set; } // таблица
-        public DbSet<Remember> Remember { get; set; } // таблица
+        public DbSet<RateContent> RateContent { get; set; } // таблица
+        public DbSet<Categories> Category { get; set; } // таблица
+        public DbSet<RememberContent> RememberContent { get; set; } // таблица
+        public DbSet<Roles> Roles { get; set; } // таблица
+        public DbSet<UsersDataAutorisation> UsersData {get;set; } // таблица
+
         protected override void OnModelCreating(ModelBuilder modelBuilder) // заполнение таблицы при создании
         {
-            modelBuilder.Entity<Category>().HasData(new Category
+            modelBuilder.Entity<Categories>().HasData(new Categories
             {
                 Id = 10000,
                 Name = "Фильмы"
             });
 
-            modelBuilder.Entity<Category>().HasData(new Category
+            modelBuilder.Entity<Categories>().HasData(new Categories
             {
                 Id = 10001,
                 Name = "Книги"
             });
 
-            modelBuilder.Entity<Category>().HasData(new Category
+            modelBuilder.Entity<Categories>().HasData(new Categories
             {
                 Id = 10002,
                 Name = "Игры"
             });
 
-            modelBuilder.Entity<Category>().HasData(new Category
+            modelBuilder.Entity<Categories>().HasData(new Categories
             {
                 Id = 10003,
                 Name = "Сериалы"
             });
 
-            modelBuilder.Entity<Category>().HasData(new Category
+            modelBuilder.Entity<Categories>().HasData(new Categories
             {
                 Id = 10004,
                 Name = "Мультфильмы"
+            });
+
+            modelBuilder.Entity<Roles>().HasData(new Roles
+            {
+                Id = 1,
+                Role = "Администратор"
+            });
+
+            modelBuilder.Entity<Roles>().HasData(new Roles
+            {
+                Id = 2,
+                Role = "Пользователь"
             });
         }
     }
