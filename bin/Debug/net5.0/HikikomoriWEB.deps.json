@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "HikikomoriWEB/1.0.0": {
         "dependencies": {
+          "HikikomriWEB.DAL": "1.0.0",
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.3",
           "Microsoft.AspNet.Mvc": "5.2.8",
           "Microsoft.AspNetCore.StaticFiles": "2.2.0",
@@ -2087,6 +2088,27 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "HikikomoriWEB.Domain/1.0.0": {
+        "runtime": {
+          "HikikomoriWEB.Domain.dll": {}
+        },
+        "compile": {
+          "HikikomoriWEB.Domain.dll": {}
+        }
+      },
+      "HikikomriWEB.DAL/1.0.0": {
+        "dependencies": {
+          "HikikomoriWEB.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.16",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.16"
+        },
+        "runtime": {
+          "HikikomriWEB.DAL.dll": {}
+        },
+        "compile": {
+          "HikikomriWEB.DAL.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4748,6 +4770,16 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "HikikomoriWEB.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HikikomriWEB.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

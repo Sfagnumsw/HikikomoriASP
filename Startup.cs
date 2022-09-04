@@ -4,9 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using HikikomoriWEB.Domain;
 using Microsoft.EntityFrameworkCore;
-using HikikomoriWEB.Services;
+using HikikomriWEB.DAL.Context;
 
 namespace HikikomoriWEB
 {
@@ -17,19 +16,15 @@ namespace HikikomoriWEB
         public void ConfigureServices(IServiceCollection services) //функционал подключается с помощью сервисов в MVC
         {
             Configuration.Bind("Project", new Config()); //подключение конфигурации из appsettings.json и связывание с соответсвующим классом
-      
+
             //services.AddMvc(options => options.EnableEndpointRouting = false); //другой способ маршрутизации через configure(отключаем эндпоинт)
 
             //services.AddTransient<>(); //подключение функционала
-           
-            services.AddTransient<DataManager>();
 
-            services.AddDbContext<AppDbContext>(i => i.UseSqlServer(Config.ConnectionString)); //подключение контекста БД
-
+            services.AddDbContext<HikDbContext>(i => i.UseSqlServer(Config.ConnectionString, b => b.MigrationsAssembly("HikikomoriWEB"))); //подключение контекста БД
             services.AddControllersWithViews().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider(); //подключение поддержки MVC и совместимость версий asp.net core 3 , а так же сервисы для контроллеров и предствалений
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) //очень важен порядок подключения компонентов middeleware
         {
             if (env.IsDevelopment())
@@ -39,7 +34,7 @@ namespace HikikomoriWEB
             app.UseStaticFiles(); //поддержка статичных файлов (css,js...)
             app.UseRouting(); //система маршрутизации (если используем AddMvc, то устанавливаем дефолРоут и отключаем эндпоинтРоут в сервисе)
             app.UseStatusCodePages(); //обработка ошибок http (404...)
-            app.UseEndpoints(endpoints => { endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}"); }); //маршрутизация под useRouting(если в адресе не прописан контроллер, то используем по умолчанию контроллер для главной страницы и меотод)
+            /*app.UseEndpoints(endpoints => { endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}"); });*/ //маршрутизация под useRouting(если в адресе не прописан контроллер, то используем по умолчанию контроллер для главной страницы и меотод)
             //app.UseMvcWithDefaultRoute(); //другой способ маршрутизации
         }
     }

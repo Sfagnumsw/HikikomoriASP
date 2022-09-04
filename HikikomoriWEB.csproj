@@ -30,9 +30,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\HelperMethods\" />
-    <Folder Include="Services\QuoteApiConnection\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\" />
     <Folder Include="wwwroot\js\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HikikomriWEB.DAL\HikikomriWEB.DAL.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
